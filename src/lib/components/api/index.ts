@@ -1,0 +1,6 @@
+export { default as CodeGroup } from './CodeGroup.svelte'
+export { default as Col } from './Col.svelte'
+export { default as Properties } from './Properties.svelte'
+export { default as Property } from './Property.svelte'
+export { default as Row } from './Row.svelte'
+export { default as Tag } from './Tag.svelte'

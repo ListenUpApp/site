@@ -1,0 +1,70 @@
+---
+title: Introduction
+description: Welcome to ListenUp documentation
+---
+
+<script>
+  import { Callout, QuickLinks, QuickLink } from '$lib/components/docs'
+  import { Server, Smartphone, Users, WifiOff } from '@lucide/svelte'
+</script>
+
+# Introduction
+
+ListenUp is a high-performance self-hosted audiobook server with native desktop and mobile clients. It's designed to be offline-first, highly social and built for audiobook lovers who want control over their library.
+
+<Callout type="tip" title="Quick Start">
+  Get running in seconds: `docker run -p 8080:8080 listenup/listenup`
+</Callout>
+
+## Why ListenUp?
+
+<QuickLinks>
+
+  <QuickLink
+    title="Offline First"
+    description="Your library works anywhere, always"
+    href="/docs/concepts/sync"
+    icon={WifiOff}
+  />
+
+  <QuickLink
+    title="Native"
+    description="First-class experience across all your devices."
+    href="/docs/concepts/native"
+    icon={Smartphone}
+  />
+  <QuickLink
+    title="Self Hosted"
+    description="Your data, your server, your control"
+    href="/docs/installation/docker"
+    icon={Server}
+  />
+  <QuickLink
+    title="Social"
+    description="Designed around listening to books together"
+    href="/docs/social"
+    icon={Users}
+  />
+</QuickLinks>
+
+<Callout type="warning" title="Early Development">
+  ListenUp is under active development. APIs may change.
+</Callout>
+
+## Installation
+
+The quickest way to get started is with Docker:
+
+```bash
+docker run -d \
+  --name listenup \
+  -p 8080:8080 \
+  -v ./data:/data \
+  listenup/listenup:latest
+```
+
+## What's Next?
+
+- [Quickstart Guide](/docs/quickstart) — Get up and running in 5 minutes
+- [Docker Installation](/docs/installation/docker) — Detailed Docker setup
+- [API Reference](/api) — Integrate with ListenUp programmatically

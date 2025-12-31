@@ -13,6 +13,11 @@ export default antfu(
     plugins: {
       'better-tailwindcss': tailwindcss,
     },
+    settings: {
+      'better-tailwindcss': {
+        entryPoint: './src/routes/layout.css',
+      },
+    },
     rules: {
       // Stylistic (warnings)
       'better-tailwindcss/enforce-consistent-class-order': 'warn',
@@ -21,7 +26,8 @@ export default antfu(
       'better-tailwindcss/no-unnecessary-whitespace': 'warn',
       // Correctness (errors)
       'better-tailwindcss/no-conflicting-classes': 'error',
-      'better-tailwindcss/no-unregistered-classes': 'error',
+      // Disabled: doesn't recognize @tailwindcss/typography plugin classes
+      'better-tailwindcss/no-unregistered-classes': 'off',
     },
   },
 )
