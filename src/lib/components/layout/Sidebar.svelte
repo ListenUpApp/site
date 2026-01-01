@@ -4,7 +4,7 @@
   import { cn } from '$lib/utils'
 
   interface Props {
-    navigation: NavGroup[]
+    navigation: readonly NavGroup[]
   }
 
   const { navigation }: Props = $props()

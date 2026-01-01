@@ -17,10 +17,15 @@
   let codeElement: HTMLElement | undefined = $state()
 
   async function copyCode() {
-    const code = codeElement?.textContent ?? ''
-    await navigator.clipboard.writeText(code)
-    copied = true
-    setTimeout(() => (copied = false), 1500)
+    try {
+      const code = codeElement?.textContent ?? ''
+      await navigator.clipboard.writeText(code)
+      copied = true
+      setTimeout(() => (copied = false), 1500)
+    }
+    catch {
+    // Silently fail - clipboard API may not be available
+    }
   }
 </script>
 
